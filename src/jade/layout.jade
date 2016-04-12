@@ -1,0 +1,25 @@
+doctype html
+mixin js(path)
+  script(type='text/javascript', src="."+path)
+mixin js_async(path)
+  script(type='text/javascript', src="."+path, async='async')
+mixin css(path)
+  link(rel='stylesheet', href="."+path)
+mixin template(id)
+  script(id=id, type="text/x-jquery-tmpl")
+html(lang='ja')
+  head
+    title しれせせ
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //+css('/vendor/bootstrap/css/bootstrap.css')
+    +css('/vendor/font-awesome/css/font-awesome.min.css')
+    +css('/css/style.css')
+    block header
+  body
+    .js-loader
+      +js('/vendor/jquery/jquery.min.js')
+      +js('/js/index.js')
+      block loadFiles
+    block contents

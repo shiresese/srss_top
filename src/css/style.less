@@ -1,0 +1,141 @@
+html {
+  min-width: 720px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+html, body, .contents {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+p, div {
+  margin: 0;
+}
+
+.cover {
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  position: fixed;
+}
+
+.shire, .sese {
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.shire {
+  top: 0;
+}
+
+.sese {
+  top: 40%;
+}
+
+.shire-name {
+  padding-left: 10px;
+  height: 100%;
+  width: 100%;
+  font-size: 27vh;
+  line-height: 1;
+  .transition();
+  @media screen and (max-width: 800px) {
+    font-size: 22vh;
+    padding-top: 20px;
+  }
+}
+@shire: rgb(242, 13, 94);
+.shire:hover {
+  background-color: #222;
+  color: #EEE;
+}
+
+.shire-name:hover {
+  color: @shire;
+}
+
+.shire-latest-info {
+  top: 0;
+  position: absolute;
+  right: 0;
+  width: 50%;
+  margin-top: 30px;
+  .transition();
+}
+
+.shire-latest-info:hover {
+    color: @shire;
+}
+
+.shire-latest-info-title, .sese-latest-info-title {
+  font-size: x-large;
+}
+
+.shire-latest-info-body, .sese-latest-info-body {
+  font-size: small;
+}
+
+.sese-latest-info {
+  margin-top: 20px;
+  margin-left: 30px;
+  position: absolute;
+}
+
+.sese-latest-info:hover {
+  color: @hover-yellow;
+}
+
+.sese-name {
+  margin-right: 10px;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  font-size: 40vh;
+  line-height: 1;
+  .transition();
+}
+
+.sese:hover {
+  background-color: #222;
+    color: #EEE;
+}
+
+@hover-yellow: rgb(224, 249, 22);
+.sese-name:hover {
+  color: @hover-yellow;
+}
+
+.sese-latest-info:hover {
+  color: @hover-yellow;
+}
+
+.sese-latest-info:hover ~ .sese-name {
+  color: #EEE;
+}
+
+
+.srss {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 10vh;
+  position: absolute;
+  bottom: 0;
+}
+
+.transition(@target: all, @ms: 500ms) {
+  transition-property: @target;
+  transition-duration: @ms;
+  transition-timing-function: cubic-bezier(0.465, 0.183, 0.153, 0.946);
+}

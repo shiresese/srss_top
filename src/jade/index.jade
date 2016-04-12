@@ -1,0 +1,33 @@
+extends layout
+block header
+  #googlea.
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-73275257-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+block loadFiles
+  +js('/js/index.js')
+block contents
+  #cover.cover
+  .shire
+    .shire-name shire
+    .shire-latest-info
+      p.shire-latest-info-title 蟻フェス で出す新種の蟻について
+      .shire-latest-info-body
+        p 今年もよろしくお願いします。
+        | 今年もこの季節がやってまいりました。
+  .sese
+    .sese-name 挵
+    .sese-latest-info
+      p.sese-latest-info-title 蟻フェス 最新情報
+      .sese-latest-info-body
+        p 今年もよろしくお願いします。
+        | 今年もこの季節がやってまいりました。
+  .srss
+    p しれせせ
