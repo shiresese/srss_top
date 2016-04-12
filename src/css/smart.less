@@ -1,5 +1,4 @@
 html {
-  min-width: 720px;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -33,31 +32,19 @@ a {
 }
 
 .shire, .sese {
-  position: absolute;
-  height: 40%;
-  width: 100%;
   cursor: pointer;
 }
 
 .shire {
-  top: 0;
 }
 
 .sese {
-  top: 40%;
 }
 
 .shire-name {
-  padding-left: 10px;
-  height: 100%;
-  width: 100%;
-  font-size: 27vh;
+  font-size: 40vw;
   line-height: 1;
   .transition();
-  @media screen and (max-width: 800px) {
-    font-size: 22vh;
-    padding-top: 20px;
-  }
 }
 @shire: rgb(242, 13, 94);
 .shire:hover {
@@ -70,11 +57,7 @@ a {
 }
 
 .shire-latest-info {
-  top: 0;
-  position: absolute;
-  right: 0;
-  width: 50%;
-  margin-top: 30px;
+  margin: 30px;
   .transition();
 }
 
@@ -91,9 +74,7 @@ a {
 }
 
 .sese-latest-info {
-  margin-top: 20px;
-  margin-left: 30px;
-  position: absolute;
+  margin: 30px;
 }
 
 .sese-latest-info:hover {
@@ -101,13 +82,8 @@ a {
 }
 
 .sese-name {
-  margin-right: 10px;
-  position: absolute;
-  text-align: right;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 40vh;
+  text-align: center;
+  font-size: 100vw;
   line-height: 1;
   .transition();
 }
@@ -132,11 +108,8 @@ a {
 
 
 .srss {
-  margin-left: 10px;
-  margin-bottom: 10px;
-  font-size: 10vh;
-  position: absolute;
-  bottom: 0;
+  margin-top: 15px;
+  font-size: 25vw;
 }
 
 .transition(@target: all, @ms: 500ms) {
