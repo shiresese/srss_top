@@ -8,7 +8,9 @@ __distdir = './dist/'
 gulp.task 'jade', () ->
   gulp.src __srcdir + 'jade/index.jade'
     .pipe $.plumber(errorHandler: $.notify.onError('Error: <%= error.message %>'))
-    .pipe $.jade()
+    .pipe $.jade({
+      pretty: true
+      })
     .pipe gulp.dest(__distdir)
 
 gulp.task 'coffee', () ->
